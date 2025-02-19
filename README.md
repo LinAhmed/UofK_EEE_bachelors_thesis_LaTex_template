@@ -16,6 +16,10 @@ You can use this template to quickly get started with your thesis in Overleaf.
 
 3. **Start Working**:
    - Once the files are uploaded, you can start editing the template in Overleaf.
-  
+
+**IMPORTANT**
+
+To use this template, compile the document using the **LuaLaTeX compiler** in Overleaf for proper font rendering and compatibility.
+You can find in the **left corner menu.**
 
 Happy writing! ;) 
