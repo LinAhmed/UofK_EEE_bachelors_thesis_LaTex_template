@@ -1,24 +1,38 @@
-% Document type and paper size
 \documentclass[12pt,a4paper]{report}
 
-% Fonts and Typography
-\usepackage{newtxtext}
-\usepackage[none]{hyphenat}
-\usepackage{ragged2e}
-\justifying
+% Mathematical Tools, algorithms
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+
+% Chapter Title Formatting
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\centering} % Center the chapter title
+  {\chaptertitlename\ \thechapter} % Format for "Chapter X"
+  {20pt} % Space between "Chapter X" and the title
+  {\Large\huge\bfseries} % Format for the chapter title (e.g., large and bold)
+\titlespacing*{\chapter}{0pt}{-30pt}{20pt} % Adjust spacing around the chapter title
+
+% Figures and Graphics
+\usepackage{graphicx}
+\usepackage{subfig} 
+\usepackage{caption}
+\usepackage{float} 
 
 % Formatting and Layout 
 \usepackage{geometry}
-\geometry{margin=1in}
+\geometry{margin=1.2in}
 \usepackage{setspace}
 \setstretch{1.5}
 \setlength{\parindent}{1.5em} 
 \setlength{\parskip}{0em} 
-\setcounter{secnumdepth}{3} 
+\setcounter{secnumdepth}{3}
 
-% Encoding and Hyperlinks
-\usepackage[utf8]{inputenc}
-\usepackage{hyperref}
+% Typography settings
+\usepackage{ragged2e}
+\justifying
+\sloppy
 
 % Headers and Footers
 \usepackage{fancyhdr}
@@ -33,43 +47,10 @@
 \usepackage{tocbibind}
 \usepackage{tocloft} 
 
-% Formatting and Layout 
-\usepackage{geometry}
-\geometry{margin=1in}
-\usepackage{setspace}
-\setstretch{1.5}
-\setlength{\parindent}{1.5em} 
-\setlength{\parskip}{0em} 
-\setcounter{secnumdepth}{3}
-\setlength{\parskip}{1em} 
-\setlength{\textfloatsep}{0.5em}
-
-% Titles Formatting
-\usepackage{titlesec}  
-\titleformat{\chapter}[block]
-  {\normalfont\huge\bfseries\centering}
-  {Chapter \thechapter}
-  {0pt}
-  {\vspace{1em} \\}
-\titlespacing*{\chapter}{0pt}{-30pt}{20pt}
-% Add a 1-line space before and after the section title
-\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
-
-% Figures and Graphics
-\usepackage{graphicx}
-\usepackage{subfig} 
-\usepackage{caption}
-\usepackage{float}
-
 % Lists and Enumerations
 \usepackage{enumerate}
 \usepackage{enumitem}
 \setlist[enumerate,1]{label=\alph*., leftmargin=2em} 
-
-% Mathematical Tools, algorithms
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-\usepackage{amsmath}
 
 % Tables
 \usepackage{xcolor}
@@ -80,11 +61,30 @@
 \usepackage{siunitx}  
 \usepackage{makecell}
 \usepackage{tabularx} 
-
+\usepackage[table,xcdraw]{xcolor}
 
 % Glossaries and Acronyms
 \usepackage{acronym}
 \usepackage[acronym]{glossaries}
+
+% Language and Font Settings (for LuaLaTeX)
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{arabic}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}  % Arabic font
+\setmainfont{Times New Roman}                    % English font
+
+% Hyperlinks (should be loaded last)
+\usepackage{hyperref}
+\hypersetup{
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Your Document Title},
+    pdfauthor={Your Name},
+    pdfsubject={Your Subject},
+    pdfkeywords={keyword1, keyword2, keyword3}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
